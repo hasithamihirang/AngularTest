@@ -1,1 +1,42 @@
 <p>roles works!</p>
+
+<div class="row">
+    <div class="col-3">
+        <p>{{firstName}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{age}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{currentDate}}</p>  
+    </div>   
+    <div class="col-3">
+        <p>{{gender}}</p>  
+    </div>   
+</div>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="firstName" class="form-control">  
+    </div>
+    <div class="col-3">
+        <input [type]="inputType">  
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName">  
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWelcomeAlert()">Show Alert</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showMessage('How are you?')">Show Message</button>
+    </div>
+</div>
